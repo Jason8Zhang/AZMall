@@ -1,0 +1,6 @@
+platform :ios, '7.0' 
+pod 'MBProgressHUD', '~> 0.8'
+pod 'MKNetworkKit', '~> 0.87'
+pod 'JSONKit', '~> 1.5pre'
+pod 'ViewDeck', '~> 2.3.1'
+pod 'IQKeyboardManager', '~> 3.3.0'
