@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MBProgressHUD.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    [MBBarProgressView ]
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+////    [MBBarProgressHUD ]
+//    [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
