@@ -19,6 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSLog(@"");
 }
 
 - (void)didReceiveMemoryWarning {

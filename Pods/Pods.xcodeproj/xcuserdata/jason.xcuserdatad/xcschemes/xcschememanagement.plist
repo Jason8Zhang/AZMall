@@ -19,17 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MKNetworkKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1893DE70459B9C5430E1E53597BF9817</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>34C7ECBDA46AC6E0B93D4743AB742AC7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57BDE400F723E6880248EBAE6D87E0BD</key>
+		<key>5510F612F525EF11D7B0DC2385A7E40A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EEB10D34E4EDBDC5C2076052A97F717</key>
+		<key>A844EEB05EB55A058C3A59F27DD8129A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B914B0D9807A05459265715C2165C66C</key>
+		<key>A93A373E325A52CE1DDA1068380F4F1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4E8C94084D093D0AF961BADE934E9F5</key>
+		<key>E40AF821DABAAD047DBEC01D4F4739BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

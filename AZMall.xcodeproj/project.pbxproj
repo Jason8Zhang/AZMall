@@ -28,6 +28,7 @@
 		964C846C1BA1DD0B001F7A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964C846F1BA1DD0B001F7A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964C84711BA1DD0B001F7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96E5D4A11BA2D7000078A5B3 /* AZMall.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AZMall.pch; sourceTree = "<group>"; };
 		A86865C7E8B1F92DB70F61F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D1CDD16D27283E28A58A9D77 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +83,7 @@
 		964C845F1BA1DD0B001F7A6E /* AZMall */ = {
 			isa = PBXGroup;
 			children = (
+				96E5D4A01BA2D6E40078A5B3 /* Model */,
 				964C84631BA1DD0B001F7A6E /* AppDelegate.h */,
 				964C84641BA1DD0B001F7A6E /* AppDelegate.m */,
 				964C84661BA1DD0B001F7A6E /* ViewController.h */,
@@ -101,6 +103,14 @@
 				964C84611BA1DD0B001F7A6E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96E5D4A01BA2D6E40078A5B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96E5D4A11BA2D7000078A5B3 /* AZMall.pch */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,10 +331,12 @@
 			baseConfigurationReference = A86865C7E8B1F92DB70F61F3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AZMall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -334,10 +346,12 @@
 			baseConfigurationReference = D1CDD16D27283E28A58A9D77 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AZMall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
