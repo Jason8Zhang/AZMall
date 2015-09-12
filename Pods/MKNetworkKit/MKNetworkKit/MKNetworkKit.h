@@ -58,7 +58,7 @@
 #import "Categories/NSDictionary+RequestEncoding.h"
 #import "Categories/NSDate+RFC1123.h"
 #import "Categories/NSData+MKBase64.h"
-/Users/jason/Desktop/AZMall/Pods/IQKeyboardManager/IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.m:33:17: Method override for the designated initializer of the superclass '-init' not found
+
 #if TARGET_OS_IPHONE
 #import "Categories/UIAlertView+MKNetworkKitAdditions.h"
 #elif TARGET_OS_MAC
