@@ -13,6 +13,8 @@
 		964C846B1BA1DD0B001F7A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C84691BA1DD0B001F7A6E /* Main.storyboard */; };
 		964C846D1BA1DD0B001F7A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964C846C1BA1DD0B001F7A6E /* Assets.xcassets */; };
 		964C84701BA1DD0B001F7A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C846E1BA1DD0B001F7A6E /* LaunchScreen.storyboard */; };
+		965FAA311BA5C767004A5F35 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA301BA5C767004A5F35 /* SuperViewController.m */; };
+		965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA351BA5CA4F004A5F35 /* LoginViewController.m */; };
 		EAC90F262C93758912003A71 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A7F8522F1CB910BB1216F1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,10 @@
 		964C846C1BA1DD0B001F7A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964C846F1BA1DD0B001F7A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964C84711BA1DD0B001F7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		965FAA2F1BA5C767004A5F35 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
+		965FAA301BA5C767004A5F35 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
+		965FAA341BA5CA4F004A5F35 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		965FAA351BA5CA4F004A5F35 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		96E5D4A11BA2D7000078A5B3 /* AZMall.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AZMall.pch; sourceTree = "<group>"; };
 		A86865C7E8B1F92DB70F61F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D1CDD16D27283E28A58A9D77 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 		964C845F1BA1DD0B001F7A6E /* AZMall */ = {
 			isa = PBXGroup;
 			children = (
+				96C460B21BA653C8002094CF /* ThirdPart */,
+				965FAA321BA5C7A0004A5F35 /* ViewControllers */,
+				965FAA2E1BA5C73F004A5F35 /* SuperViewController */,
 				96E5D4A01BA2D6E40078A5B3 /* Model */,
 				964C84631BA1DD0B001F7A6E /* AppDelegate.h */,
 				964C84641BA1DD0B001F7A6E /* AppDelegate.m */,
@@ -103,6 +112,39 @@
 				964C84611BA1DD0B001F7A6E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		965FAA2E1BA5C73F004A5F35 /* SuperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				965FAA2F1BA5C767004A5F35 /* SuperViewController.h */,
+				965FAA301BA5C767004A5F35 /* SuperViewController.m */,
+			);
+			path = SuperViewController;
+			sourceTree = "<group>";
+		};
+		965FAA321BA5C7A0004A5F35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				965FAA331BA5C7A0004A5F35 /* LoginViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		965FAA331BA5C7A0004A5F35 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				965FAA341BA5CA4F004A5F35 /* LoginViewController.h */,
+				965FAA351BA5CA4F004A5F35 /* LoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		96C460B21BA653C8002094CF /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPart;
 			sourceTree = "<group>";
 		};
 		96E5D4A01BA2D6E40078A5B3 /* Model */ = {
@@ -146,6 +188,7 @@
 				TargetAttributes = {
 					964C845C1BA1DD0B001F7A6E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = AMCV9XUG95;
 					};
 				};
 			};
@@ -220,7 +263,9 @@
 			files = (
 				964C84681BA1DD0B001F7A6E /* ViewController.m in Sources */,
 				964C84651BA1DD0B001F7A6E /* AppDelegate.m in Sources */,
+				965FAA311BA5C767004A5F35 /* SuperViewController.m in Sources */,
 				964C84621BA1DD0B001F7A6E /* main.m in Sources */,
+				965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,13 +376,17 @@
 			baseConfigurationReference = A86865C7E8B1F92DB70F61F3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AZMall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(PODS_ROOT)/** $(BUILT_PRODUCTS_DIR)";
 			};
 			name = Debug;
 		};
@@ -346,13 +395,17 @@
 			baseConfigurationReference = D1CDD16D27283E28A58A9D77 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AZMall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(PODS_ROOT)/** $(BUILT_PRODUCTS_DIR)";
 			};
 			name = Release;
 		};

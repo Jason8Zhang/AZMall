@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
