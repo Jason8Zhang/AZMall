@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
 #import "LoginViewController.h"
+#import "FPSingle.h"
+
 
 @interface AppDelegate ()
 
@@ -19,11 +21,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [MBBarProgressView ]
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-////    [MBBarProgressHUD ]
-//    [MBProgressHUD showHUDAddedTo:self.window animated:YES];
-//    [self.window makeKeyAndVisible];
+    UINavigationController *rootNavi = [[UINavigationController alloc] initWithRootViewController:[FPSingle sharedInstance].mainVC.centerController];
+    [FPSingle sharedInstance].naviVC = rootNavi;
+    
+    self.window.rootViewController = rootNavi;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
