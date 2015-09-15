@@ -7,8 +7,6 @@
 //
 
 #import "MainSuperViewController.h"
-#import "HomeViewController.h"
-#import "LeftViewController.h"
 
 
 @interface MainSuperViewController ()
@@ -16,12 +14,19 @@
 @end
 
 @implementation MainSuperViewController
+@synthesize homeVC = _homeVC;
+@synthesize leftVC = _leftVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.centerController = [[UIStoryboard storyboardWithName:@"HomeVC" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeVC"];
-    self.leftController = [[UIStoryboard storyboardWithName:@"LeftVC" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftVC"];
+    self.homeVC = [[UIStoryboard storyboardWithName:@"HomeVC" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeVC"];
+    self.leftVC = [[UIStoryboard storyboardWithName:@"LeftVC" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftVC"];
+    self.centerController = _leftVC;
+    self.leftController = _homeVC;
+    
+//    self.centerController = [[UIStoryboard storyboardWithName:@"HomeVC" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeVC"];
+//    self.leftController = [[UIStoryboard storyboardWithName:@"LeftVC" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftVC"];
     self.elastic = YES;
     self.leftSize = [UIScreen mainScreen].bounds.size.width - 255;
 }

@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "LoginViewController.h"
 #import "FPSingle.h"
+#import "MainSuperViewController.h"
 
 
 @interface AppDelegate ()
@@ -20,11 +21,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    UINavigationController *rootNavi = [[UINavigationController alloc] initWithRootViewController:[FPSingle sharedInstance].mainVC.centerController];
-    [FPSingle sharedInstance].naviVC = rootNavi;
+//    // Override point for customization after application launch.
+//    UINavigationController *rootNavi = [[UINavigationController alloc] initWithRootViewController:[FPSingle sharedInstance].mainVC.centerController];
+//    [FPSingle sharedInstance].naviVC = rootNavi;
+//    
+//    self.window.rootViewController = [FPSingle sharedInstance].mainVC.homeVC;
+    MainSuperViewController *rootVC = [MainSuperViewController new];
+    self.window.rootViewController = rootVC;
+    [FPSingle sharedInstance].mainVC = rootVC;
     
-    self.window.rootViewController = rootNavi;
     [self.window makeKeyAndVisible];
 
     return YES;

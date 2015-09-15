@@ -19,7 +19,8 @@ static FPSingle *_sharedInstance = nil;
 //        self.tokenIndex = 1;
 //        _isKHByLogin = NO;
         self.mainVC = [MainSuperViewController new];
-        self.naviVC = [UINavigationController new];
+        self.naviVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+        
     }
     return  self;
 }
