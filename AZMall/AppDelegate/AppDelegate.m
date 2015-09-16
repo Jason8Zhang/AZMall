@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "FPSingle.h"
 #import "MainSuperViewController.h"
+#import "IQKeyboardManager.h"
 
 
 @interface AppDelegate ()
@@ -26,6 +27,13 @@
 //    [FPSingle sharedInstance].naviVC = rootNavi;
 //    
 //    self.window.rootViewController = [FPSingle sharedInstance].mainVC.homeVC;
+    //键盘遮挡textField 自动弹起框架
+    //Enabling keyboard manager(Use this line to enable managing distance between keyboard & textField/textView).
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    
+    //(Optional)Set Distance between keyboard & textField, Default is 10.
+    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:15];
+
     MainSuperViewController *rootVC = [MainSuperViewController new];
     self.window.rootViewController = rootVC;
     [FPSingle sharedInstance].mainVC = rootVC;
