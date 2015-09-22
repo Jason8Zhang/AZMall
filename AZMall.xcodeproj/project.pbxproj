@@ -13,6 +13,8 @@
 		964C84701BA1DD0B001F7A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C846E1BA1DD0B001F7A6E /* LaunchScreen.storyboard */; };
 		965FAA311BA5C767004A5F35 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA301BA5C767004A5F35 /* SuperViewController.m */; };
 		965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA351BA5CA4F004A5F35 /* LoginViewController.m */; };
+		96B0CC6A1BB13A6A00242FFA /* AZActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0CC671BB13A6A00242FFA /* AZActivityIndicator.m */; };
+		96B0CC6B1BB13A6A00242FFA /* AZNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0CC691BB13A6A00242FFA /* AZNetWorking.m */; };
 		96C461391BA6A9AE002094CF /* FPSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C461381BA6A9AE002094CF /* FPSingle.m */; };
 		96C4613F1BA6AC4C002094CF /* MainSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4613E1BA6AC4C002094CF /* MainSuperViewController.m */; };
 		96C461461BA6B1BB002094CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C461421BA6B1BB002094CF /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 		965FAA301BA5C767004A5F35 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
 		965FAA341BA5CA4F004A5F35 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		965FAA351BA5CA4F004A5F35 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		96B0CC661BB13A6A00242FFA /* AZActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZActivityIndicator.h; sourceTree = "<group>"; };
+		96B0CC671BB13A6A00242FFA /* AZActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZActivityIndicator.m; sourceTree = "<group>"; };
+		96B0CC681BB13A6A00242FFA /* AZNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZNetWorking.h; sourceTree = "<group>"; };
+		96B0CC691BB13A6A00242FFA /* AZNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZNetWorking.m; sourceTree = "<group>"; };
 		96C461371BA6A9AE002094CF /* FPSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSingle.h; sourceTree = "<group>"; };
 		96C461381BA6A9AE002094CF /* FPSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSingle.m; sourceTree = "<group>"; };
 		96C4613D1BA6AC4C002094CF /* MainSuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSuperViewController.h; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 		96C461481BA6B1E8002094CF /* AZNetWorking */ = {
 			isa = PBXGroup;
 			children = (
+				96B0CC661BB13A6A00242FFA /* AZActivityIndicator.h */,
+				96B0CC671BB13A6A00242FFA /* AZActivityIndicator.m */,
+				96B0CC681BB13A6A00242FFA /* AZNetWorking.h */,
+				96B0CC691BB13A6A00242FFA /* AZNetWorking.m */,
 			);
 			path = AZNetWorking;
 			sourceTree = "<group>";
@@ -350,7 +360,9 @@
 				965FAA311BA5C767004A5F35 /* SuperViewController.m in Sources */,
 				96C461391BA6A9AE002094CF /* FPSingle.m in Sources */,
 				96C461461BA6B1BB002094CF /* AppDelegate.m in Sources */,
+				96B0CC6A1BB13A6A00242FFA /* AZActivityIndicator.m in Sources */,
 				964C84621BA1DD0B001F7A6E /* main.m in Sources */,
+				96B0CC6B1BB13A6A00242FFA /* AZNetWorking.m in Sources */,
 				96C4613F1BA6AC4C002094CF /* MainSuperViewController.m in Sources */,
 				965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */,
 				96C4614B1BA6B216002094CF /* HomeViewController.m in Sources */,
