@@ -21,12 +21,15 @@
 - (void)addHUDToView:(UIView*)showView{
     self.progressActivityHUD = [[MBProgressHUD alloc] initWithView:showView];
     self.progressActivityHUD.color = [UIColor clearColor];
-    //设置不透明度
-    self.progressActivityHUD.opacity = 0.5f;
-    //设置留白
+    self.progressActivityHUD.opacity = 0.5;
     self.progressActivityHUD.margin = 20.0f;
-    self.progressActivityHUD.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
-    UIImageView *backview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.progressActivityHUD.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5f];
+    
+    
+    
+    self.progressActivityHUD.labelText = @"操作成功";
+    self.progressActivityHUD.mode = MBProgressHUDModeCustomView;
+    UIImageView *backView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     NSArray *arrays = [[NSArray alloc]initWithObjects:
                        [UIImage imageNamed:@"leopardRun_01"],
                        [UIImage imageNamed:@"leopardRun_02"],
@@ -38,17 +41,21 @@
                        [UIImage imageNamed:@"leopardRun_08"],
                        [UIImage imageNamed:@"leopardRun_09"],
                        [UIImage imageNamed:@"leopardRun_10"], nil];
-    backview.animationImages = arrays;
-    backview.animationDuration = 1;
-    [backview startAnimating];
-    self.progressActivityHUD.customView = backview;
-    self.progressActivityHUD.mode = MBProgressHUDModeCustomView;
-    self.progressActivityHUD.delegate = (id<MBProgressHUDDelegate>)self;
+    backView.animationImages = arrays;
+    backView.animationDuration = 1;
+    
+    [backView startAnimating];
+    self.progressActivityHUD.customView = backView;
     [showView addSubview:self.progressActivityHUD];
+//    [self.progressActivityHUD show:YES];
+//    [self show];
+
 }
 - (void)show{
+//    self.progressActivityHUD = [[MBProgressHUD alloc] init];
     self.activityIndicatorCount++;
     [self.progressActivityHUD show:YES];
+   
     
 }
 - (void)showWithLabelText:(NSString*)labelText{
@@ -62,6 +69,7 @@
     [self.progressActivityHUD show:YES];
 }
 - (void)hidden{
+//     [self.progressActivityHUD hide:YES ];
     self.activityIndicatorCount--;
     if (self.activityIndicatorCount < 0) {
         self.activityIndicatorCount = 0;
@@ -69,6 +77,7 @@
     }
     if (self.activityIndicatorCount == 0){
         [self.progressActivityHUD hide:YES];
+        [self.progressActivityHUD removeFromSuperview];
     }
 }
 - (void)close{

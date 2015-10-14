@@ -7,6 +7,7 @@
 //
 
 #import "LeftViewController.h"
+#import "GestureLoginViewController.h"
 
 @interface LeftViewController ()
 
@@ -22,6 +23,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnPush:(id)sender {
+    NSLog(@"btn action ");
+    GestureLoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"GestureLoginVC" bundle:nil] instantiateViewControllerWithIdentifier:@"GestureLoginVC"];
+    [self presentViewController:loginViewController animated:YES completion:nil];
+//    [self presentViewController:[[GestureLoginViewController alloc] initWithGestureLockViewType:GestureLockViewType_Create]
+//                       animated:YES
+//                     completion:^{
+//        
+//    }];
+    
 }
 
 /*

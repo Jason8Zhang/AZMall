@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
+#import <UIKit/UIDevice.h>
 
 #define BOUNDS    [UIScreen mainScreen].bounds
 #define offsetLeftHand      60
@@ -192,6 +194,87 @@
 //            NSLog(@"闭眼");
 //        }];
 //    }
+}
+
+- (NSString *)checkFingerPrintsAvailabeWithContext:(LAContext *)context error:(NSError*)error {
+    NSString *returnCode = @"";
+    if ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0) {
+        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+            returnCode = @"0";
+            
+        }
+        else{
+            returnCode = [self judgeErrorCode:error];
+        }
+    }
+    
+    return  returnCode;
+}
+
+- (NSString *) judgeErrorCode:(NSError *)error{
+    NSString *returnCode = @"";
+    switch ([error code]) {
+        case kLAErrorAuthenticationFailed:
+            returnCode = @"1";
+            break;
+        case kLAErrorUserCancel:
+            returnCode = @"2";
+            break;
+        case kLAErrorUserFallback:
+            returnCode = @"3";
+            break;
+        case kLAErrorSystemCancel:
+            returnCode = @"4";
+            break;
+        case kLAErrorPasscodeNotSet:
+            returnCode = @"5";
+            break;
+        case kLAErrorTouchIDNotAvailable:
+            returnCode = @"6";
+            break;
+        case kLAErrorTouchIDNotEnrolled:
+            returnCode = @"7";
+            break;
+        case kLAErrorTouchIDLockout:
+            returnCode = @"8";
+            break;
+        case kLAErrorAppCancel:
+            returnCode = @"9";
+            break;
+        case kLAErrorInvalidContext:
+            returnCode = @"10";
+            break;
+        default:
+            returnCode = @"11";
+            break;
+    }
+    return returnCode;
+}
+
+- (NSString *) validateFingerPrints {
+    LAContext * context = [LAContext new];
+    __block NSError * errorCode = nil;
+    __block NSString * returnCode = @"";
+    if ([self checkFingerPrintsAvailabeWithContext:context error:errorCode]) {
+        [context setLocalizedFallbackTitle:@"Enter Password"];
+//        [context evaluateAccessControl:(nonnull SecAccessControlRef) operation:(LAAccessControlOperation) localizedReason:(nonnull NSString *) reply:^(BOOL success, NSError * _Nullable error) {
+//        code
+//    }]
+//        [context evaluatedPolicyDomainState]
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                localizedReason:@"请验证指纹"
+                          reply:^(BOOL success, NSError * _Nullable error) {
+                              if (success) {
+                                  NSLog(@"validate fingerprints sucess !");
+                                  returnCode = @"0";
+                              }
+                              errorCode = error;
+                          }];
+        
+    }
+    [self judgeErrorCode:errorCode];
+    
+    return returnCode;
 }
 
 @end

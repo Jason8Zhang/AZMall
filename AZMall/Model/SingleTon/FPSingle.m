@@ -8,9 +8,11 @@
 
 #import "FPSingle.h"
 
+
 @implementation FPSingle
 @synthesize naviVC;
 @synthesize mainVC;
+//@synthesize networking;
 static FPSingle *_sharedInstance = nil;
 
 - (instancetype)init{
@@ -20,6 +22,7 @@ static FPSingle *_sharedInstance = nil;
 //        _isKHByLogin = NO;
         self.mainVC = [MainSuperViewController new];
         self.naviVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+//        self.networking = [AZNetWorking new];
         
     }
     return  self;

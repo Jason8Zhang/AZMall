@@ -10,19 +10,21 @@
 
 @implementation AZNetWorking{
     AFHTTPRequestOperationManager *manager;
-     NSInteger networkStatus;
+    NSInteger networkStatus;
     UIView *hudView;
 }
-@synthesize activityIndicator;
+//@synthesize activityIndicator;
 @synthesize responseType;
+
+
 -(instancetype)init{
     if (self = [super init]) {
         hudView = [[[UIApplication sharedApplication] delegate] window];
         manager = [AFHTTPRequestOperationManager manager];
         self.responseType = AZNetworkResponseType_JSON;
         if (hudView) {
-            self.activityIndicator = [AZActivityIndicator new];
-            [self.activityIndicator addHUDToView:hudView];
+            _activityIndicator = [[AZActivityIndicator alloc] init];
+            [_activityIndicator addHUDToView:hudView];
         }
     }
     return self;
@@ -33,13 +35,14 @@
         hudView = hud;
         self.responseType = AZNetworkResponseType_JSON;
         if (hudView) {
-            self.activityIndicator = [AZActivityIndicator new];
-            [self.activityIndicator addHUDToView:hudView];
+            _activityIndicator = [[AZActivityIndicator alloc] init];
+            [_activityIndicator addHUDToView:hudView];
         }
 
     }
     return self;
 }
+
 -(void)networkReachable{
     /**
      AFNetworkReachabilityStatusUnknown          = -1,  // 未知
@@ -54,7 +57,8 @@
     }];
 
 }
--(void)postHttpTransactionWithHostName:(NSString *)hostName hostPath:(NSString *)hostPath useSSL:(BOOL)useSSL withPara:(NSDictionary *)dicPara sucessBlock:(void(^)(id response))sucessBlock failBlock:(void(^)(NSError *error))failBlock{
+
+-(void)postHttpTransactionWithHostName:(NSString *)hostName hostPath:(NSString *)hostPath useSSL:(BOOL)useSSL withPara:(NSMutableDictionary *)dicPara sucessBlock:(void(^)(id response))sucessBlock failBlock:(void(^)(NSError *error))failBlock{
     NSString *strURL = [NSString stringWithFormat:@"%@%@/%@",useSSL?@"https://":@"http://",hostName,hostPath];
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
     
@@ -65,24 +69,33 @@
     manager.requestSerializer = serializer;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];//设置相应内容类型 
     NSLog(@"url地址看我:%@",strURL);
+    [_activityIndicator show];
+    [dicPara setObject:[self getTimeStamp] forKey:@"showapi_timestamp"];
     [manager POST:strURL parameters:dicPara success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if (sucessBlock) {
             NSLog(@"交易发送成功！！！");
             sucessBlock(responseObject);
-            [activityIndicator show];
+            [_activityIndicator hidden];
         }
+        [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+            NSLog(@"bytesRead ==> %lu,\n totalBytesRead ==> %lld, \n totalBytesExpectedToRead ==> %lld",(unsigned long)bytesRead,totalBytesRead,totalBytesExpectedToRead);
+        }];
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         if (failBlock) {
             NSLog(@"交易发送失败！！！");
             failBlock(error);
-            [activityIndicator hidden];
+            [self analysisError:error];
+            [_activityIndicator hidden];
+            
         }
     }];
+//    [_activityIndicator hidden];
 }
 
 -(void)cancel{
     [manager.operationQueue cancelAllOperations];
 }
+
 -(void)analysisError:(NSError *)error{
     NSString *strErrorMessage = nil;
     switch (error.code) {
@@ -92,7 +105,11 @@
         case -1001:
             strErrorMessage = @"请求超时";
             break;
+        case -1009:
+            strErrorMessage = @"网络连接断开";
+            break;
         default:
+            strErrorMessage = error.description;
             break;
     }
     if (strErrorMessage) {
@@ -103,8 +120,13 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     }
-    else{
-        NSLog(@"网络信息错误,错误详情看我==>\n%@",error);
-    }
+}
+
+-(NSString *)getTimeStamp{
+    NSString *timeStamp = @"";
+    NSDateFormatter *formate = [NSDateFormatter new];
+    [formate setDateFormat:@"yyyyMMddHHmmss"];
+    timeStamp = [formate stringFromDate:[NSDate date]];
+    return timeStamp;
 }
 @end

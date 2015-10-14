@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96338D731BC7590A0097F35F /* GestureLoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96338D721BC7590A0097F35F /* GestureLoginVC.storyboard */; };
 		964C84621BA1DD0B001F7A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C84611BA1DD0B001F7A6E /* main.m */; };
 		964C846B1BA1DD0B001F7A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C84691BA1DD0B001F7A6E /* Main.storyboard */; };
 		964C846D1BA1DD0B001F7A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964C846C1BA1DD0B001F7A6E /* Assets.xcassets */; };
 		964C84701BA1DD0B001F7A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C846E1BA1DD0B001F7A6E /* LaunchScreen.storyboard */; };
+		9652C9221BCB7D4B00BD813B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9652C9211BCB7D4B00BD813B /* LocalAuthentication.framework */; };
 		965FAA311BA5C767004A5F35 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA301BA5C767004A5F35 /* SuperViewController.m */; };
 		965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965FAA351BA5CA4F004A5F35 /* LoginViewController.m */; };
+		966C0DBE1BB8E50900B1FE9D /* GestureLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966C0DBD1BB8E50900B1FE9D /* GestureLoginViewController.m */; };
+		966C0DC11BB8E51E00B1FE9D /* FingerPrintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966C0DC01BB8E51E00B1FE9D /* FingerPrintsViewController.m */; };
+		966C0DC41BB8E57100B1FE9D /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966C0DC31BB8E57100B1FE9D /* GestureLockView.m */; };
 		96B0CC6A1BB13A6A00242FFA /* AZActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0CC671BB13A6A00242FFA /* AZActivityIndicator.m */; };
 		96B0CC6B1BB13A6A00242FFA /* AZNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B0CC691BB13A6A00242FFA /* AZNetWorking.m */; };
 		96C461391BA6A9AE002094CF /* FPSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C461381BA6A9AE002094CF /* FPSingle.m */; };
@@ -28,16 +33,25 @@
 
 /* Begin PBXFileReference section */
 		14A7F8522F1CB910BB1216F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96338D721BC7590A0097F35F /* GestureLoginVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GestureLoginVC.storyboard; sourceTree = "<group>"; };
 		964C845D1BA1DD0B001F7A6E /* AZMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964C84611BA1DD0B001F7A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		964C846A1BA1DD0B001F7A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		964C846C1BA1DD0B001F7A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964C846F1BA1DD0B001F7A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964C84711BA1DD0B001F7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9652C9211BCB7D4B00BD813B /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		965FAA2F1BA5C767004A5F35 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
 		965FAA301BA5C767004A5F35 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
 		965FAA341BA5CA4F004A5F35 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		965FAA351BA5CA4F004A5F35 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		966C0DB91BB8DCE000B1FE9D /* ConfigGlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigGlobalDefine.h; sourceTree = "<group>"; };
+		966C0DBC1BB8E50900B1FE9D /* GestureLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureLoginViewController.h; sourceTree = "<group>"; };
+		966C0DBD1BB8E50900B1FE9D /* GestureLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureLoginViewController.m; sourceTree = "<group>"; };
+		966C0DBF1BB8E51E00B1FE9D /* FingerPrintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPrintsViewController.h; sourceTree = "<group>"; };
+		966C0DC01BB8E51E00B1FE9D /* FingerPrintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerPrintsViewController.m; sourceTree = "<group>"; };
+		966C0DC21BB8E57100B1FE9D /* GestureLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureLockView.h; sourceTree = "<group>"; };
+		966C0DC31BB8E57100B1FE9D /* GestureLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureLockView.m; sourceTree = "<group>"; };
 		96B0CC661BB13A6A00242FFA /* AZActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZActivityIndicator.h; sourceTree = "<group>"; };
 		96B0CC671BB13A6A00242FFA /* AZActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZActivityIndicator.m; sourceTree = "<group>"; };
 		96B0CC681BB13A6A00242FFA /* AZNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZNetWorking.h; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9652C9221BCB7D4B00BD813B /* LocalAuthentication.framework in Frameworks */,
 				EAC90F262C93758912003A71 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +91,7 @@
 		11D44CAD7E99197884A87562 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9652C9211BCB7D4B00BD813B /* LocalAuthentication.framework */,
 				14A7F8522F1CB910BB1216F1 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -146,6 +162,8 @@
 		965FAA321BA5C7A0004A5F35 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				966C0DBA1BB8E4E500B1FE9D /* FingerPrintsLoginViewController */,
+				966C0DBB1BB8E4E500B1FE9D /* GestureLoginViewController */,
 				96C4613A1BA6ABD2002094CF /* HomeViewController */,
 				96C4613B1BA6ABD2002094CF /* LeftViewController */,
 				96C4613C1BA6ABD2002094CF /* MainViewController */,
@@ -161,6 +179,27 @@
 				965FAA351BA5CA4F004A5F35 /* LoginViewController.m */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		966C0DBA1BB8E4E500B1FE9D /* FingerPrintsLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				966C0DBF1BB8E51E00B1FE9D /* FingerPrintsViewController.h */,
+				966C0DC01BB8E51E00B1FE9D /* FingerPrintsViewController.m */,
+			);
+			path = FingerPrintsLoginViewController;
+			sourceTree = "<group>";
+		};
+		966C0DBB1BB8E4E500B1FE9D /* GestureLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				966C0DC21BB8E57100B1FE9D /* GestureLockView.h */,
+				966C0DC31BB8E57100B1FE9D /* GestureLockView.m */,
+				966C0DBC1BB8E50900B1FE9D /* GestureLoginViewController.h */,
+				966C0DBD1BB8E50900B1FE9D /* GestureLoginViewController.m */,
+				96338D721BC7590A0097F35F /* GestureLoginVC.storyboard */,
+			);
+			path = GestureLoginViewController;
 			sourceTree = "<group>";
 		};
 		96C460B21BA653C8002094CF /* ThirdPart */ = {
@@ -192,8 +231,8 @@
 		96C4613B1BA6ABD2002094CF /* LeftViewController */ = {
 			isa = PBXGroup;
 			children = (
-				96C4614C1BA6B220002094CF /* LeftViewController.h */,
 				96C461511BA6B259002094CF /* LeftVC.storyboard */,
+				96C4614C1BA6B220002094CF /* LeftViewController.h */,
 				96C4614D1BA6B220002094CF /* LeftViewController.m */,
 			);
 			path = LeftViewController;
@@ -243,6 +282,7 @@
 				96C461481BA6B1E8002094CF /* AZNetWorking */,
 				96C461361BA6A9AE002094CF /* SingleTon */,
 				96E5D4A11BA2D7000078A5B3 /* AZMall.pch */,
+				966C0DB91BB8DCE000B1FE9D /* ConfigGlobalDefine.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,7 +320,7 @@
 				TargetAttributes = {
 					964C845C1BA1DD0B001F7A6E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = AMCV9XUG95;
+						DevelopmentTeam = AX7ZW6ZC83;
 					};
 				};
 			};
@@ -310,6 +350,7 @@
 				964C84701BA1DD0B001F7A6E /* LaunchScreen.storyboard in Resources */,
 				964C846D1BA1DD0B001F7A6E /* Assets.xcassets in Resources */,
 				96C461501BA6B24F002094CF /* HomeVC.storyboard in Resources */,
+				96338D731BC7590A0097F35F /* GestureLoginVC.storyboard in Resources */,
 				96C461521BA6B259002094CF /* LeftVC.storyboard in Resources */,
 				964C846B1BA1DD0B001F7A6E /* Main.storyboard in Resources */,
 			);
@@ -361,10 +402,13 @@
 				96C461391BA6A9AE002094CF /* FPSingle.m in Sources */,
 				96C461461BA6B1BB002094CF /* AppDelegate.m in Sources */,
 				96B0CC6A1BB13A6A00242FFA /* AZActivityIndicator.m in Sources */,
+				966C0DC11BB8E51E00B1FE9D /* FingerPrintsViewController.m in Sources */,
+				966C0DBE1BB8E50900B1FE9D /* GestureLoginViewController.m in Sources */,
 				964C84621BA1DD0B001F7A6E /* main.m in Sources */,
 				96B0CC6B1BB13A6A00242FFA /* AZNetWorking.m in Sources */,
 				96C4613F1BA6AC4C002094CF /* MainSuperViewController.m in Sources */,
 				965FAA361BA5CA4F004A5F35 /* LoginViewController.m in Sources */,
+				966C0DC41BB8E57100B1FE9D /* GestureLockView.m in Sources */,
 				96C4614B1BA6B216002094CF /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +452,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -430,6 +475,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -451,7 +497,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -466,6 +513,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -482,7 +530,7 @@
 				INFOPLIST_FILE = AZMall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;
@@ -501,7 +549,7 @@
 				INFOPLIST_FILE = AZMall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = csii.AZMall;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.csii.AZMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SHARED_PRECOMPS_DIR = /AZMall/AZMall/Model/AZMall.pch;

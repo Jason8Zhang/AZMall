@@ -19,11 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.homeVC = [[UIStoryboard storyboardWithName:@"HomeVC" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeVC"];
     self.leftVC = [[UIStoryboard storyboardWithName:@"LeftVC" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftVC"];
-    self.centerController = _leftVC;
-    self.leftController = _homeVC;
+    self.leftController = _leftVC;
+    self.centerController = _homeVC;
     
 //    self.centerController = [[UIStoryboard storyboardWithName:@"HomeVC" bundle:nil] instantiateViewControllerWithIdentifier:@"HomeVC"];
 //    self.leftController = [[UIStoryboard storyboardWithName:@"LeftVC" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftVC"];

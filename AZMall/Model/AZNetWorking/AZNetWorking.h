@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "FPSingle.h"
 #import "AZActivityIndicator.h"
 typedef NS_ENUM(NSInteger,AZNetworkResponseType) {
     AZNetworkResponseType_JSON,
@@ -19,7 +20,8 @@ typedef NS_ENUM(NSInteger,AZNetworkResponseType) {
     AZActivityIndicator *_activityIndicator;
 }
 @property (nonatomic,assign) AZNetworkResponseType responseType;
-@property (nonatomic,strong) AZActivityIndicator *activityIndicator;
+//@property (nonatomic,strong) AZActivityIndicator *activityIndicator;
+//@property (nonatomic,retain) AFHTTPRequestOperation *operation;
 -(void )networkReachable;
 -(void)postHttpTransactionWithHostName:(NSString *)hostName hostPath:(NSString *)hostPath useSSL:(BOOL)useSSL withPara:(NSDictionary *)dicPara sucessBlock:(void(^)(id response))sucessBlock failBlock:(void(^)(NSError *error))failBlock;
 -(void)cancel;

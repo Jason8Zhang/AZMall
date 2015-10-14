@@ -15,7 +15,7 @@
 }
 @property (nonatomic,retain)MBProgressHUD *progressActivityHUD;
 @property (nonatomic,assign)NSInteger *activityIndicatorCount;
-@property (nonatomic,retain)void (^determinateBlock)(MBProgressHUD *);
+@property (nonatomic,copy)void (^determinateBlock)(MBProgressHUD *);
 
 - (void)addHUDToView:(UIView*)showView;
 - (void)show;
